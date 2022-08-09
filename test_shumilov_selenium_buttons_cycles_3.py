@@ -85,22 +85,3 @@ def test_work_of_3_transforming_buttons_and_selection_one():
         number_of_input_text += 1
 
     chrome_driver.quit()
-
-
-def test_adaptive_layout():
-
-    chrome_driver.get("https://rioran.github.io/ru_vowels_filter/main.html")
-    chrome_driver.maximize_window()
-
-    for paths in XPATHS_of_buttons:
-        coordinates = chrome_driver.find_element(By.XPATH, paths)
-
-        location = coordinates.location
-        size = coordinates.size
-
-        print(location)
-        print(size)
-
-
-    # assert size_of_changed_button = size_of_button
-    chrome_driver.quit()
