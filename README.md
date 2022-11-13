@@ -13,3 +13,11 @@ Additional:
 
 How to start by terminal:
 pytest
+
+UPDATES on 13.11.2022 according to the list of improvements (https://docs.google.com/document/d/10XHNBW49sfvLWeS3o4zsbdAZLv2VO6IqWxdYAbN0hbE/edit):
+1) All constants are moved to the separate file "constanst.py"
+2) The chrome_driver launches by a fixture. (The "scope='session'" was removed because it causes troubles with the "test_selenium_buttons_cycles_3_update_5.py" test)
+3) The sleep function is substituted by the implicity_wait function
+4) The "test_selenium_buttons_cycles_3_update_5.py" is decoupled by the @pytest.mark.parametrize into 3 tests
+5) Some minor defects are fixed according to the list of improvements (#8,10,13)
+6) Updating the readme file
