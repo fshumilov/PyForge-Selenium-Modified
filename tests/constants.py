@@ -7,7 +7,7 @@ XPATH_OF_BUTTONS = ["//button[contains(.,\'Оставить только гла�
 
 XPATH_OF_BUTTONS_FROM_RIGHT_TO_LEFT = ["//button[contains(.,\'Оставить ещё и .,-!?\')]",
                                         "//button[contains(.,\'Ну и ещё пробелы\')]",
-                                        "//button[contains(.,\'Оставить гласные ВСЕГДА\')]",
+                                        "//button[contains(.,\'Оставить только гласные\')]",
                                         ]
 
 # XPATH_OF_BUTTONS_FROM_RIGHT_TO_LEFT = ["//button[contains(.,\'Оставить ещё и .,-!?\')]",
