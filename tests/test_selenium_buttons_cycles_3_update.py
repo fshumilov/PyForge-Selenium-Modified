@@ -8,12 +8,14 @@ from constants import XPATH_OF_BUTTONS
 from constants import INPUT_TEXT
 from constants import OUTPUT_TEXT
 
-@pytest.mark.parametrize ("input_text, number_of_input_text",[
-    (INPUT_TEXT[0], 0),
-    (INPUT_TEXT[1], 1),
-    (INPUT_TEXT[2], 2)
-])
-def test_work_of_3_transforming_buttons_and_selection_one(input_text, number_of_input_text, chrome_driver):
+
+@pytest.mark.parametrize(
+    "input_text, number_of_input_text",
+    [(INPUT_TEXT[0], 0), (INPUT_TEXT[1], 1), (INPUT_TEXT[2], 2)],
+)
+def test_work_of_3_transforming_buttons_and_selection_one(
+    input_text, number_of_input_text, chrome_driver
+):
 
     # Open the site in the selected resolution
     chrome_driver.maximize_window()
@@ -36,7 +38,9 @@ def test_work_of_3_transforming_buttons_and_selection_one(input_text, number_of_
 
         # checking the selection button
         chrome_driver.implicitly_wait(3)
-        chrome_driver.find_element(By.XPATH, "//button[contains(.,\'Выделить результат\')]").click()
+        chrome_driver.find_element(
+            By.XPATH, "//button[contains(.,'Выделить результат')]"
+        ).click()
         act = ActionChains(chrome_driver)
         act.key_down(Keys.CONTROL).send_keys("c").key_up(Keys.CONTROL).perform()
         highlighted_text = str(pyperclip.paste())

@@ -10,7 +10,9 @@ def test_horizontal_adaptive_layout(chrome_driver):
     chrome_driver.implicitly_wait(3)
 
     # Search of last button position
-    coordinates = chrome_driver.find_element(By.XPATH, "//button[contains(.,\'Выделить результат\')]")
+    coordinates = chrome_driver.find_element(
+        By.XPATH, "//button[contains(.,'Выделить результат')]"
+    )
     location = coordinates.location
     location.pop("x")
     last_y = location["y"]
@@ -32,7 +34,9 @@ def test_vertical_adaptive_layout(chrome_driver):
     chrome_driver.implicitly_wait(3)
 
     # Search of last button position
-    coordinates = chrome_driver.find_element(By.XPATH, "//button[contains(.,\'Выделить результат\')]")
+    coordinates = chrome_driver.find_element(
+        By.XPATH, "//button[contains(.,'Выделить результат')]"
+    )
     location = coordinates.location
     location.pop("x")
     last_y = location["y"]
